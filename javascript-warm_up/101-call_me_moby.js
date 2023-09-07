@@ -2,11 +2,11 @@
 
 // A function that executes x  times a function
 
-function callMeMeMoby(fn, x) {
+function callMeMeMoby(x, theFunction) {
 	for (let i = 0; i < x; i++) {
-	  fn();
-	}
-  }
+	  theFunction();
+	};
+  };
 
   module.export.callMeMeMoby = callMeMeMoby;
 /*
