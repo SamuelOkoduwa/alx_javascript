@@ -3,5 +3,4 @@
 function add(a, b) {
 	return a + b
 };
-const result = add()
-console.log(result)
+module.exports = {add};
