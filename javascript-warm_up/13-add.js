@@ -1,6 +1,5 @@
 #!/usr/bin/node
 
-function add(a, b) {
-	return a + b;
+exports.add = function add(int_one, int_two) {
+	return int_one + int_two;
 };
-module.exports = add;
