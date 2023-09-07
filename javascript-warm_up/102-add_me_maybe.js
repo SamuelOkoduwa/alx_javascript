@@ -1,6 +1,6 @@
 #!bin/usr/node 
 
-exports.incrementAndCall = function incrementAndCall(number, theFunction) {
+exports.incrementAndCall = function (number, theFunction) {
 	// Increment the number
 	number++;
   
