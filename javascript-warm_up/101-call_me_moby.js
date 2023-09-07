@@ -2,13 +2,13 @@
 
 // A function that executes x  times a function
 
-function callMeMeMoby(x, theFunction) {
+exports.callMeMeMoby = function (x, theFunction) {
 	for (let i = 0; i < x; i++) {
 	  theFunction();
-	};
-  };
+	}
+  }
 
-  module.export.callMeMeMoby = callMeMeMoby;
+//   module.export.callMeMeMoby = callMeMeMoby;
 /*
 const executeXTimes = {
 	execute: function(x, theFunction) {
