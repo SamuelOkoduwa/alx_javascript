@@ -9,9 +9,9 @@ function outer(){	//the outer function
 		let exclamation = '!';	//The exclamation variable
 		function inception() {	//The inception funtion
 			alert(globalVariable + ' ' + course + exclamation)	//alert on the inception function
-			inception();	//calling the inception function
 		}
-		inner();	//calling the inner function
+	inception();	//calling the inception function	
 	}
-	outer();	//calling the outer function
+	inner();	//calling the inner function
 }
+outer();	//calling the outer function
