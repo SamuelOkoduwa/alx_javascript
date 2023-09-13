@@ -1,1 +1,1 @@
-JavaScript a language of the web
+A Catalogue of Projects
