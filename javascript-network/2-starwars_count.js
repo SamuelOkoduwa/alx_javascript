@@ -22,5 +22,5 @@ fetch(apiURL)
     console.log((numFilms));
   })
   .catch((error) => {
-    console.error(`Error: ${error.message}`);
+    console.error(error.message);
   });
