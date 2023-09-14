@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CHANGING MODE</title>
+</head>
+<body>
+	<!-- Adding paragraph and button -->
+    <p>Welcome Holberton!</p>
+    <button id="spookyButton">Spooky</button>
+    <button id="darkModeButton">Dark mode</button>
+    <button id="screamModeButton">Scream mode</button>
+
+	
+    <script>
+		// The changeMode function
+        function changeMode(size, weight, transform, background, color) {
+			// The closure that changes the style of the entire page and seting the corresponding parameters
+            return function () {
+                document.body.style.fontSize = size + 'px';
+                document.body.style.fontWeight = weight;
+                document.body.style.textTransform = transform;
+                document.body.style.backgroundColor = background;
+                document.body.style.color = color;
+            };
+        }
+		// The main function linking the event with the buttons
+        function main() {
+			// The changeMode invoking call functions
+            const spooky = changeMode(9, 'bold', 'uppercase', 'pink', 'green');
+            const darkMode = changeMode(12, 'bold', 'capitalize', 'black', 'white');
+            const screamMode = changeMode(12, 'normal', 'lowercase', 'white', 'black');
+			// The event listeners
+            document.getElementById('spookyButton').addEventListener('click', spooky);
+            document.getElementById('darkModeButton').addEventListener('click', darkMode);
+            document.getElementById('screamModeButton').addEventListener('click', screamMode);
+        }
+
+        main();
+    </script>
+</body>
+</html>
