@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Selecting Elements</title>
+	<style>
+	.highlight {
+		color: red;
+	</style>
+</head>
+<body>
+	<p class="highlight">This is a highlighted paragraph.</p>
+  	<p>This is a normal paragraph.</p>
+
+	<script>
+		// Accessing or getting the highlighted elements
+		const elementToModify = document.querySelectorAll('.highlight');
+		//  if it were document.queryselector for just one element,the next line should be 
+		// elementToModify.style.fontWeight = 'bold'; 
+
+		// The fact that you are selecting all the elements with the class highlight we loop through each of them
+		elementToModify.forEach(function(theElement) {
+			theElement.style.fontWeight = 'bold';
+		})
+		
+	</script>
+</body>
+</html>
