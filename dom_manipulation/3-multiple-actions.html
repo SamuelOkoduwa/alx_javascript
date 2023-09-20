@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Creating and Removing Elements</title>
+	<style>
+		body{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border: 10px solid blue;
+			height: 50vh;
+			width: 50vw;
+			margin-left: 350px;
+		}
+		#container {
+			background-color: silver;
+			border-radius: 5px;
+			padding: 1px;
+			color: aliceblue;
+			margin-bottom: 5px;
+		}
+		#removesHides {
+			margin-bottom: 30px;
+			border-radius: 5px;
+			padding: 10px;
+			color: aliceblue;
+			background-color: silver;
+			font-weight: bolder;
+			box-shadow: none;
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="container"></div>
+	<button id="removesHides">Remove and Hide Paragraph When Clicked</button>
+	
+	<script>
+		// Accessing the div id of container
+		const createAppendRemove = document.getElementById('container');
+
+		// creating a new <p> element and adding a new paragraph as it's content
+		const createParagraph = document.createElement('p');
+		// Adding new paragraph as the content
+		createParagraph.textContent = 'New paragraph';
+		// Appending the created elements to the container element.
+		container.appendChild(createParagraph);
+
+		// adding a button that removes/hides the newly created paragraph when first click and shows it when clicked again
+		let removeHide = document.getElementById('removesHides');
+		let visibleParagraph = true;
+
+		removeHide.addEventListener('click', function() {
+			if (visibleParagraph) {
+				// removes/hide the paragraph
+				createParagraph.style.display = 'none';
+			}
+			else {
+				// shows the paragraph when clicked
+				createParagraph.style.display = 'block';
+			}
+			visibleParagraph = !visibleParagraph;
+		})
+
+
+	</script>
+</body>
+</html>
