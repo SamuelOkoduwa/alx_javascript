@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Email</title>
+</head>
+<body>
+	<form id="emailForm">
+		<label for="email">Email:</label>
+		<input type="text" id="email" name="email" onkeyup="validateEmail()">
+		<button type="submit">Submit</button>
+		<p id="error" style="color: red;"></p>
+	</form>
+
+<script src="1-email-validation.js">
+	
+	// const submitError = document.getElementById('error')
+	// function validateEmail(){
+	// 	theEmail = document.getElementById('email');
+	// 	if (theEmail.length == 0) {
+	// 	submitError.innerHTML = 'Please enter your email';
+	// 	return false;
+	// }
+	// // if alphabet(camelcase), dot, underscore,halfen, number, @, alphabet, period(.), alphabet(lowercase) respectievly
+	// if (!theEmail.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+	// 	submitError.innerHTML = 'Invalid Email';
+	// 	return false;
+	// }
+	// emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+	// return true
+	// }
+
+
+// 	document.addEventListener("DOMContentLoaded", function () {
+//     const emailForm = document.getElementById("emailForm");
+//     const emailInput = document.getElementById("email");
+//     const errorElement = document.getElementById("error");
+
+//     emailForm.addEventListener("submit", function (event) {
+//         // Prevent the default form submission behavior
+//         event.preventDefault();
+
+//         // Get the value entered in the email input field
+//         const emailValue = emailInput.value.trim();
+
+//         // Regular expression to check email format
+//         const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+//         if (emailPattern.test(emailValue)) {
+//             // If the email format is correct, allow 
+//         }
+//     });
+// });form submission
+//             errorElement.textContent = "";
+//             emailForm.submit(); // You can remove this line to just validate without submitting.
+//         } else {
+//             // If the email format is incorrect, display an error message
+//             errorElement.textContent = "Please enter a valid email address.";
+</script>
+</body>
+</html>
