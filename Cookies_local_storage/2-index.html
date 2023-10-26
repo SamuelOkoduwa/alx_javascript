@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie Example</title>
+</head>
+<body>
+    <h1>Cookies Example</h1>
+    <input type="text" id="firstname" placeholder="First Name" required/>
+    <input type="text" id="email" placeholder="Email" required/>
+    <button onclick="setCookies()">Log me in</button>
+    <button onclick="showCookies()">Show the cookies</button>
+    <div id="cookieDisplay"></div>
+
+    <script>
+		function setCookie(name, value, days) {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+	}
+
+	function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (const cookie of cookies) {
+        const [cookieName, cookieValue] = cookie.split('=');
+        if (cookieName.trim() === name) {
+            return cookieValue;
+        }
+    }
+    return '';
+	}
+
+	function showCookies() {
+    const cookieDisplay = document.getElementById('cookieDisplay');
+    const firstNameCookie = getCookie('firstname');
+    const emailCookie = getCookie('email');
+
+    const paragraph = document.createElement('p');
+    paragraph.innerHTML = `Email: ${emailCookie} - Firstname: ${firstNameCookie}`;
+    cookieDisplay.innerHTML = '';
+    cookieDisplay.appendChild(paragraph);
+	}
+
+	</script>
+</body>
+</html>
