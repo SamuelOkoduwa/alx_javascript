@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cookies</title>
-</head>
-<body>
-	<h1>Login to the website</h1>
-	<input type="text" id="firstname" placeholder="First Name" required>
-	<input type="email" id="email" placeholder="Email" required>
-	<button onclick="setCookies()">Log me in</button>
-	<h1>Cookies</h1>
-	<button onclick="showCookies">Show the cookies</button>
-
-	<script src="src/index.js"></script>
-
-	<!-- <script>
-		function setCookies () {
-			const firstname = document.getElementById('firstname').value;
-			const email = document.getElementById('email').value;
-			setCookie('firstname', firstname);
-			setCookie('email', email);
-		}
-		function showCookies(){
-			const paragraph = document.createElement('p');
-			paragraph.innerHTML = document.cookie;
-			document.body.appendChild(paragraph)
-		}
-	</script> -->
-
-	<!-- <script>
-		function setCookie(name, value, days) {
+function setCookie(name, value, days) {
     const expires = new Date();
     expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
     document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
@@ -89,7 +56,4 @@ module.exports = {
         contentBase: path.join(__dirname, 'dist'),
         port: 8080,
     },
-}; -->
-	<!-- </script> -->
-</body>
-</html>
+};
