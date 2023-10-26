@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/src/js.cookie.js"></script>
+</head>
+<body>
+    <!-- Your HTML content here -->
+    <button id="set-cookie-button">Set Cookie and Show Welcome Message</button>
+    <button id="delete-cookie-button">Delete Cookie and Show Form</button>
+    <script>
+		// Import the js-cookie library
+	import Cookies from 'js-cookie';
+
+	// Function to show the welcome message
+	function showWelcomeMessage(message) {
+    const welcomeMessage = document.createElement('div');
+    welcomeMessage.textContent = message;
+    document.body.appendChild(welcomeMessage);
+	}
+
+	// Function to set cookies and show the welcome message
+	function setCookiesAndShowWelcomeMessage() {
+    Cookies.set('username', 'John');
+    Cookies.set('visited', 'true');
+
+    showWelcomeMessage('Welcome, John!');
+	}
+
+	// Function to delete cookies and show the form
+	function deleteCookiesAndShowForm() {
+    Cookies.remove('username');
+    Cookies.remove('visited');
+
+    // Display your form or perform other actions
+    // For example, you can redirect to a login page
+	}
+
+	// Event listeners
+	document.getElementById('set-cookie-button').addEventListener('click', setCookiesAndShowWelcomeMessage);
+	document.getElementById('delete-cookie-button').addEventListener('click', deleteCookiesAndShowForm);
+
+	</script>
+</body>
+</html>
